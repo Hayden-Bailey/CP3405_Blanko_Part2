@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CP3405_Blanko</string>
+    <string name="sign_in">Sign In</string>
+    <string name="appsistant">Appsistant</string>
+    <string name="create_account">Create Account</string>
 </resources>
