@@ -3,4 +3,7 @@
     <string name="sign_in">Sign In</string>
     <string name="appsistant">Appsistant</string>
     <string name="create_account">Create Account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="sign_in">Sign In</string>
 </resources>
