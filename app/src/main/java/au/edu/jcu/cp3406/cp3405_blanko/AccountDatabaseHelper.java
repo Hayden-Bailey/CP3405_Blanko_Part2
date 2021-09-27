@@ -2,6 +2,7 @@ package au.edu.jcu.cp3406.cp3405_blanko;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -43,5 +44,25 @@ public class AccountDatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(column4, answer);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
+    }
+
+    public boolean checkUserAccounts(String firstName, String lastName) {
+
+        boolean userFound = false;
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {column1, column2};
+        Cursor cursor = db.query(TABLE_NAME, columns, null, null, null, null, column2);
+        int counter = 0;
+        cursor.moveToFirst();
+
+        while (!userFound) {
+            String dbFirstName = cursor.getString(1);
+            String dbLastName = cursor.getString(2);
+            if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
+                userFound = true;
+            }
+        }
+
+        return userFound;
     }
 }
