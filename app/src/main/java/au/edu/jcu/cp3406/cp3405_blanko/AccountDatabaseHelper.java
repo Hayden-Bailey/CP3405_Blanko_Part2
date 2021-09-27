@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 public class AccountDatabaseHelper extends SQLiteOpenHelper {
 
@@ -55,13 +56,20 @@ public class AccountDatabaseHelper extends SQLiteOpenHelper {
         int counter = 0;
         cursor.moveToFirst();
 
-        while (!userFound) {
-            String dbFirstName = cursor.getString(1);
-            String dbLastName = cursor.getString(2);
-            if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
-                userFound = true;
+        try {
+            while (!userFound) {
+                String dbFirstName = cursor.getString(1);
+                String dbLastName = cursor.getString(2);
+                if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
+                    userFound = true;
+                }
             }
+        } catch (Exception CursorIndexOutOfBoundsException) {
+            return userFound;
         }
+        counter = 0;
+        cursor.close();
+        db.close();
 
         return userFound;
     }
