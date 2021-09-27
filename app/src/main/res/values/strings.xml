@@ -16,4 +16,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="user_name">User Name</string>
+    <string name="this_is_where_the_user_question_will_display">This is where the user question will display</string>
+    <string name="hi_there">Hi There</string>
+    <string name="last_name_create">Last Name:</string>
+    <string name="first_name_create">First Name:</string>
+    <string name="question_create">Question:</string>
+    <string name="answer_create">Answer:</string>
 </resources>

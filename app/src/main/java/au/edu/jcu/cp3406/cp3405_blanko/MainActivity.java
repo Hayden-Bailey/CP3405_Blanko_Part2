@@ -21,11 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
         firstName = findViewById(R.id.firstName);
         lastName = findViewById(R.id.lastName);
         Button signInButton = findViewById(R.id.signIn);
@@ -39,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 String firstNameText = firstName.getText().toString();
                 String lastNameText = lastName.getText().toString();
                 boolean userExists = accountDatabaseHelper.checkUserAccounts(firstNameText,lastNameText);
-                if (userExists) {
+                if (!userExists) {
                     Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
                     startActivity(intent);
                 }
