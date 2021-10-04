@@ -23,4 +23,8 @@
     <string name="first_name_create">First Name:</string>
     <string name="question_create">Question:</string>
     <string name="answer_create">Answer:</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+    <string name="add_account">Add Account</string>
+    <string name="sign_in">Sign In</string>
 </resources>

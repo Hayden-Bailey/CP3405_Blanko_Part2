@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Calendar"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:background="@color/calendar"
+                android:paddingTop="50dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Contacts"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@color/contacts"
+                android:paddingTop="50dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Messages"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@color/messages"
+                android:paddingTop="50dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Email"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@color/emails"
+                android:paddingTop="50dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Call"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@color/calls"
+                android:paddingTop="50dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Events"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@color/events"
+                android:paddingTop="50dp"/>
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

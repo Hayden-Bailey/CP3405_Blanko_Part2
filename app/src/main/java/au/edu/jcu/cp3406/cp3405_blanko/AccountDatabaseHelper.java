@@ -53,21 +53,19 @@ public class AccountDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {column1, column2};
         Cursor cursor = db.query(TABLE_NAME, columns, null, null, null, null, column2);
-        int counter = 0;
         cursor.moveToFirst();
 
         try {
-            while (!userFound) {
+            do {
                 String dbFirstName = cursor.getString(1);
                 String dbLastName = cursor.getString(2);
                 if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
                     userFound = true;
                 }
-            }
+            } while (cursor.moveToNext());
         } catch (Exception CursorIndexOutOfBoundsException) {
             return userFound;
         }
-        counter = 0;
         cursor.close();
         db.close();
 
