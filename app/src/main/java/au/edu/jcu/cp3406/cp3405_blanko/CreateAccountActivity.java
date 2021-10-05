@@ -28,6 +28,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         questionInput = findViewById(R.id.questionInput);
         answerInput = findViewById(R.id.answerInput);
 
+        accountDatabaseHelper = new AccountDatabaseHelper(this);
+
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -66,6 +68,4 @@ public class CreateAccountActivity extends AppCompatActivity {
     private void popupMessage() {
         Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_SHORT).show();
     }
-
-
 }

@@ -13,9 +13,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    AccountDatabaseHelper accountDatabaseHelper;
+    private AccountDatabaseHelper accountDatabaseHelper;
+    private EditText firstName, lastName;
 
-    public EditText firstName, lastName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 String firstNameText = firstName.getText().toString();
                 String lastNameText = lastName.getText().toString();
                 boolean userExists = accountDatabaseHelper.checkUserAccounts(firstNameText,lastNameText);
-                if (!userExists) {
+                if (userExists) {
                     Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+                    intent.putExtra("firstName",firstNameText);
+                    intent.putExtra("lastName",lastNameText);
                     startActivity(intent);
                 }
                 else {

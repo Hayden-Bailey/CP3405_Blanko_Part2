@@ -55,20 +55,36 @@ public class AccountDatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_NAME, columns, null, null, null, null, column2);
         cursor.moveToFirst();
 
-        try {
-            do {
-                String dbFirstName = cursor.getString(1);
-                String dbLastName = cursor.getString(2);
-                if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
-                    userFound = true;
-                }
-            } while (cursor.moveToNext());
-        } catch (Exception CursorIndexOutOfBoundsException) {
-            return userFound;
-        }
+        do {
+            String dbFirstName = cursor.getString(0);
+            String dbLastName = cursor.getString(1);
+            if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
+                userFound = true;
+            }
+        } while (cursor.moveToNext());
+
         cursor.close();
         db.close();
 
         return userFound;
+    }
+
+    public String getQuestion(String firstName, String lastName) {
+        String dbQuestion = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {column1, column2, column3};
+        Cursor cursor = db.query(TABLE_NAME, columns, null, null, null, null, column2);
+        cursor.moveToFirst();
+        do {
+            String dbFirstName = cursor.getString(0);
+            String dbLastName = cursor.getString(1);
+            if (dbFirstName.equals(firstName) && dbLastName.equals(lastName)) {
+                dbQuestion = cursor.getString(2);
+                break;
+            }
+        } while (cursor.moveToNext());
+        cursor.close();
+        db.close();
+        return dbQuestion;
     }
 }

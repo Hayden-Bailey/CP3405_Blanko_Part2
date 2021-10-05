@@ -20,30 +20,33 @@
 
 
     <EditText
+        android:id="@+id/firstName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:inputType="textShortMessage"
+        android:hint="@string/first_name"
+        android:textSize="25sp"
+        android:importantForAutofill="no"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
         android:id="@+id/lastName"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:hint="@string/last_name"
         android:textSize="25sp"
-        android:inputType="text"
+        android:inputType="textShortMessage"
+        android:textAlignment="center"
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100sp"
-        android:inputType="text"
-        android:hint="@string/first_name"
-        android:textSize="25sp"
-        android:importantForAutofill="no"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
         android:id="@+id/signIn"

@@ -5,13 +5,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class QuestionActivity extends AppCompatActivity {
+
+    private TextView userName, questionDisplay;
+    private String firstName, lastName;
+    private AccountDatabaseHelper accountDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            firstName = extras.getString("firstName");
+            lastName = extras.getString("lastName");
+        }
+
+        accountDatabaseHelper = new AccountDatabaseHelper(this);
+
+        userName = findViewById(R.id.userName);
+        questionDisplay = findViewById(R.id.questionDisplay);
+
+        String fullName = firstName + " " + lastName;
+        userName.setText(fullName);
+
+        questionDisplay.setText(accountDatabaseHelper.getQuestion(firstName, lastName));
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
