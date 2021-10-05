@@ -26,4 +26,10 @@
     <string name="question">Question</string>
     <string name="answer">Answer</string>
     <string name="add_account">Add Account</string>
+    <string name="calendar">Calendar</string>
+    <string name="contacts">Contacts</string>
+    <string name="messages">Messages</string>
+    <string name="email">Email</string>
+    <string name="call">Call</string>
+    <string name="events">Events</string>
 </resources>

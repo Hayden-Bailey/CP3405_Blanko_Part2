@@ -20,21 +20,25 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Calendar"
+                android:text="@string/calendar"
                 android:textAlignment="center"
+                android:clickable="true"
                 android:textSize="30sp"
                 android:background="@color/calendar"
-                android:paddingTop="50dp"/>
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Contacts"
+                android:text="@string/contacts"
                 android:textSize="30sp"
+                android:clickable="true"
                 android:textAlignment="center"
                 android:background="@color/contacts"
-                android:paddingTop="50dp" />
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
 
         </TableRow>
@@ -48,21 +52,25 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Messages"
+                android:clickable="true"
+                android:text="@string/messages"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:background="@color/messages"
-                android:paddingTop="50dp"/>
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Email"
+                android:text="@string/email"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:background="@color/emails"
-                android:paddingTop="50dp"/>
+                android:clickable="true"
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
         </TableRow>
 
@@ -75,21 +83,25 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Call"
+                android:text="@string/call"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:background="@color/calls"
-                android:paddingTop="50dp"/>
+                android:clickable="true"
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Events"
+                android:text="@string/events"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:background="@color/events"
-                android:paddingTop="50dp"/>
+                android:clickable="true"
+                android:paddingTop="50dp"
+                android:focusable="true" />
 
         </TableRow>
     </TableLayout>
