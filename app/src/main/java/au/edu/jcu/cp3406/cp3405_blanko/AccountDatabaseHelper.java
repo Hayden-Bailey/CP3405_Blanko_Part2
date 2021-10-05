@@ -87,4 +87,10 @@ public class AccountDatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return dbQuestion;
     }
+
+    public void clearDatabase(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.execSQL("delete from " + TABLE_NAME);
+        db.close();
+    }
 }
