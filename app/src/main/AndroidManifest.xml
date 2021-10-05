@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CP3405_Blanko">
-        <activity android:name=".DashboardActivity"></activity>
+        <activity
+            android:name=".CallActivity"
+            android:exported="true" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".MainActivity">
