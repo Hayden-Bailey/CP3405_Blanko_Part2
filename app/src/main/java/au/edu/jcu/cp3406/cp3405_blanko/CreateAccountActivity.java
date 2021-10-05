@@ -13,8 +13,10 @@ import android.widget.Toast;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
-    public Button addAccountButton;
-    public EditText firstNameInput, lastNameInput, questionInput, answerInput;
+    private Button addAccountButton;
+    private EditText firstNameInput, lastNameInput, questionInput, answerInput;
+    private AccountDatabaseHelper accountDatabaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +36,17 @@ public class CreateAccountActivity extends AppCompatActivity {
         addAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (firstNameInput.getText().toString().isEmpty() || lastNameInput.getText().toString().isEmpty() || questionInput.getText().toString().isEmpty() || answerInput.getText().toString().isEmpty()) {
+                String firstName = "", lastName = "", question = "", answer = "";
+
+                firstName = firstNameInput.getText().toString();
+                lastName = lastNameInput.getText().toString();
+                question = questionInput.getText().toString();
+                answer = answerInput.getText().toString();
+
+                if (firstName.isEmpty() || lastName.isEmpty() || question.isEmpty() || answer.isEmpty()) {
                     popupMessage();
                 } else {
+                    accountDatabaseHelper.addUserAccount(firstName, lastName, question, answer);
                     Log.i("tag", "Account Added");
                 }
             }
