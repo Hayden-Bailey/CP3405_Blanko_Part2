@@ -17,28 +17,30 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/Calendar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/calendar"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="50dp"
                 android:text="@string/calendar"
                 android:textAlignment="center"
-                android:clickable="true"
-                android:textSize="30sp"
-                android:background="@color/calendar"
-                android:paddingTop="50dp"
-                android:focusable="true" />
+                android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/Contacts"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/contacts"
-                android:textSize="30sp"
-                android:clickable="true"
-                android:textAlignment="center"
                 android:background="@color/contacts"
+                android:clickable="true"
+                android:focusable="true"
                 android:paddingTop="50dp"
-                android:focusable="true" />
+                android:text="@string/contacts"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
 
         </TableRow>
@@ -49,28 +51,30 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/Messages"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:clickable="true"
-                android:text="@string/messages"
-                android:textSize="30sp"
-                android:textAlignment="center"
                 android:background="@color/messages"
+                android:clickable="true"
+                android:focusable="true"
                 android:paddingTop="50dp"
-                android:focusable="true" />
+                android:text="@string/messages"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/Email"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/email"
-                android:textSize="30sp"
-                android:textAlignment="center"
                 android:background="@color/emails"
                 android:clickable="true"
+                android:focusable="true"
                 android:paddingTop="50dp"
-                android:focusable="true" />
+                android:text="@string/email"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
         </TableRow>
 
@@ -93,16 +97,17 @@
                 android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/Events"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/events"
-                android:textSize="30sp"
-                android:textAlignment="center"
                 android:background="@color/events"
                 android:clickable="true"
+                android:focusable="true"
                 android:paddingTop="50dp"
-                android:focusable="true" />
+                android:text="@string/events"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
         </TableRow>
     </TableLayout>

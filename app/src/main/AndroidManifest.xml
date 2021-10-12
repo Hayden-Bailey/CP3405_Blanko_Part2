@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CP3405_Blanko">
         <activity
-            android:name=".CallActivity"
+            android:name=".apps.CalendarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".apps.CallActivity"
             android:exported="true" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".QuestionActivity" />
