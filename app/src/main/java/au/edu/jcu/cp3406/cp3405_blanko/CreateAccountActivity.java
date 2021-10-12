@@ -49,7 +49,9 @@ public class CreateAccountActivity extends AppCompatActivity {
                     popupMessage();
                 } else {
                     accountDatabaseHelper.addUserAccount(firstName, lastName, question, answer);
+                    Toast.makeText(getApplicationContext(),"Account Added",Toast.LENGTH_SHORT).show();
                     Log.i("tag", "Account Added");
+                    finish();
                 }
             }
         });
