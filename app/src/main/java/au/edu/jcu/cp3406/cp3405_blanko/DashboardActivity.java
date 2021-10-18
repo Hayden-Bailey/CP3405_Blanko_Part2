@@ -20,6 +20,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        // Calendar Icon
         findViewById(R.id.Calendar).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +29,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.CalendarIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, CalendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Contacts Icon
         findViewById(R.id.Contacts).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +46,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.ContactsIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, ContactsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Messages Icon
         findViewById(R.id.Messages).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +63,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.MessagesIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, MessagesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Email Click
         findViewById(R.id.Email).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +80,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.EmailsIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, EmailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Call Click
         findViewById(R.id.Call).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +97,24 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.Events).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.CallsIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, CallActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Settings Click
+        findViewById(R.id.Settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.SettingsIcon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
