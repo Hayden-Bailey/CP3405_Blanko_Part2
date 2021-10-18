@@ -11,7 +11,7 @@ import au.edu.jcu.cp3406.cp3405_blanko.apps.ContactsActivity;
 import au.edu.jcu.cp3406.cp3405_blanko.apps.MessagesActivity;
 import au.edu.jcu.cp3406.cp3405_blanko.apps.EmailActivity;
 import au.edu.jcu.cp3406.cp3405_blanko.apps.CallActivity;
-import au.edu.jcu.cp3406.cp3405_blanko.apps.EventsActivity;
+import au.edu.jcu.cp3406.cp3405_blanko.apps.SettingsActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -109,7 +109,7 @@ public class DashboardActivity extends AppCompatActivity {
         findViewById(R.id.Settings).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });
@@ -117,7 +117,7 @@ public class DashboardActivity extends AppCompatActivity {
         findViewById(R.id.SettingsIcon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, EventsActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, SettingsActivity.class);
                 startActivity(intent);
             }
         });

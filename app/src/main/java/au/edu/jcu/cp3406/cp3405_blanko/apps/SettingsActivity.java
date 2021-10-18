@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import au.edu.jcu.cp3406.cp3405_blanko.R;
 
-public class EventsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_events);
+        setContentView(R.layout.activity_settings);
     }
 }
